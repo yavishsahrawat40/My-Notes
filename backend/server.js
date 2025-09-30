@@ -37,9 +37,17 @@ app.use(limiter);
 
 // CORS configuration
 const allowedOrigins = [
-  process.env.FRONTEND_URL,      // Vercel frontend
-  'http://localhost:3000'        // Local dev
-].filter(Boolean); // remove undefined values
+  process.env.FRONTEND_URL,      // should resolve to Vercel frontend
+  'http://localhost:3000'        // for local testing
+].filter(Boolean);
+
+console.log("✅ Allowed Origins:", allowedOrigins);
+
+
+app.use((req, res, next) => {
+  console.log("🌍 Incoming request from origin:", req.headers.origin);
+  next();
+});
 
 app.use(cors({
   origin: function (origin, callback) {
@@ -54,6 +62,8 @@ app.use(cors({
   },
   credentials: true,
 }));
+
+app.options('*', cors());
 
 // Body parsing middleware
 app.use(express.json({ limit: '10mb' }));
