@@ -46,10 +46,10 @@ Deploy your Full Stack Notes App in 10 minutes!
 3. Create a note
 4. ✅ Done!
 
-## 🎯 URLs You'll Get
-- **Your App**: `https://your-app-name.vercel.app`
-- **API**: `https://your-app-name.railway.app/api`
-- **Health Check**: `https://your-app-name.railway.app/api/health`
+## 🎯 Live Application URLs
+- **Frontend**: https://my-notes-six-sooty.vercel.app/
+- **Backend API**: https://my-notes-production-50b5.up.railway.app/api
+- **Health Check**: https://my-notes-production-50b5.up.railway.app/api/health
 
 ## 🔧 Need Help?
 - Check [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions
